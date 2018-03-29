@@ -1,0 +1,1 @@
+{{Form::submit('Opslaan',  array_merge(['class' => 'float-right clearfix btn btn-'.$class], $attributes))}}
