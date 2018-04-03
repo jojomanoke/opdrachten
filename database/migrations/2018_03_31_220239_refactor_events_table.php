@@ -14,8 +14,8 @@ class RefactorEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function(Blueprint $t){
-//            $t->dateTime('start')->change();
-//            $t->dateTime('end')->change();
+            $t->dateTime('start')->change();
+            $t->dateTime('end')->change();
             $t->string('allDay')->change();
         });
     }
