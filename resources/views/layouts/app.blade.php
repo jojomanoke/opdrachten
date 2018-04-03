@@ -13,11 +13,6 @@
     <!-- Scripts -->
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script
-            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-            crossorigin="anonymous">
-    </script>
     <script>if (window.module) module = window.module;</script>
 
     <!-- Fonts -->
