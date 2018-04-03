@@ -9,10 +9,10 @@ window.Popper = require('popper.js').default;
  */
 
 window.$ = window.jQuery = require('jquery');
+window.moment = require('moment');
+window.fullCalendar = require('fullcalendar');
 
 require('bootstrap');
-import 'jquery-ui/themes/base/all.css';
-import 'jquery-ui/ui/widgets/datepicker.js';
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the

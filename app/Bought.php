@@ -10,10 +10,10 @@ class Bought extends Model
 
     public function customer()
     {
-        return $this->hasOne('App\Customer');
+        return $this->belongsTo('App\Customer');
     }
     public function product()
     {
-        return $this->hasOne('App\Product');
+        return $this->belongsTo('App\Product');
     }
 }

@@ -29,9 +29,12 @@ Route::prefix('serverside')->group(function(){
     Route::get('/', 'OpdrachtenController@serverside');
     Route::get('/customers/overview', 'CustomerController@overview');
     Route::get('/customer/{id}/overview', 'CustomerController@allBought');
+    Route::get('/customer/{uid}/product/{pid}', 'CustomerController@productSelect');
 });
 
 Route::prefix('clientside')->group(function(){
     Route::get('/', 'OpdrachtenController@clientside');
-    Route::get('/calendar', 'OpdrachtenController@calendar');
+    Route::get('/calendar', 'CalendarController@index');
+    Route::post('/calendar/save', 'CalendarController@save');
+    Route::get('/calendar/get', 'CalendarController@getEvent');
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use App\Vak;
 use Illuminate\Http\Request;
 
@@ -11,10 +12,6 @@ class OpdrachtenController extends Controller
 
     public function clientside(){
         return view('clientside.overview');
-    }
-
-    public function calendar(){
-        return view('clientside.calendar');
     }
 
 
