@@ -14,6 +14,6 @@ class Customer extends Model
 
     public function town()
     {
-        return $this->hasOne('App\Town');
+        return $this->hasOne('App\Town', 'id', 'town_id');
     }
 }

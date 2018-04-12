@@ -20,11 +20,18 @@ class CustomerController extends Controller
         return view('serverside.customers.personal', ['customer' => $customer]);
     }
 
-    public function productSelect($uid, $pid){
+    public function productSelect($uid, $pid, $oid){
         $customer = Customer::find($uid);
-        $product = Product::find($pid);
-        $amount = $customer->bought->where('id', $pid);
 
-        return view('serverside.customers.product', ['customer' => $customer, 'product' => $product, 'amount' => $amount]);
+        $orders = $customer->bought->where('current_order', $oid)->all();
+
+        if(count($orders) > 1){
+            $products = Product::where('id', $orders[0]->product_id)->orWhere('id', $orders[1]->product_id)->get();
+        }
+        else{
+            $products = Product::where('id', $orders[0]->product_id)->get();
+        }
+
+        return view('serverside.customers.product', ['customer' => $customer, 'products' => $products]);
     }
 }

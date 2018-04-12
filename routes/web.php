@@ -29,7 +29,7 @@ Route::prefix('serverside')->group(function(){
     Route::get('/', 'OpdrachtenController@serverside');
     Route::get('/customers/overview', 'CustomerController@overview');
     Route::get('/customer/{id}/overview', 'CustomerController@allBought');
-    Route::get('/customer/{uid}/product/{pid}', 'CustomerController@productSelect');
+    Route::get('/customer/{uid}/product/{pid}/{oid}', 'CustomerController@productSelect');
 });
 
 Route::prefix('clientside')->group(function(){
@@ -38,3 +38,21 @@ Route::prefix('clientside')->group(function(){
     Route::post('/calendar/save', 'CalendarController@save');
     Route::get('/calendar/get', 'CalendarController@getEvent');
 });
+
+//Route::prefix('/{vak}')->group(function(){
+//    Route::get('/', 'VakkenController@dynamic');
+//    Route::get('/{opdracht}', 'VakkenController@dynamic');
+//    Route::get('/{opdracht}/{page}', 'VakkenController@dynamic');
+//    Route::post('/{opdracht}/save', 'VakkenController@dynamic');
+//});
+
+//naw
+//aantal
+//product
+//btw
+//totaal
+//subtotaal
+//6 21%
+//totaal
+//dienst 6%
+//product 21%

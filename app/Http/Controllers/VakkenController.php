@@ -24,4 +24,18 @@ class VakkenController extends Controller
 
         return redirect('/vakken');
     }
+
+//    public function dynamic($vak, $opdracht = null, $page = null){
+//        if(!isset($opdracht)){
+//            return view($vak.'.overview');
+//        }
+//        else if(isset($vak, $opdracht)){
+//            if(isset($page)){
+//                return view($vak.'.'.$opdracht.'.'.$page);
+//            }
+//            else{
+//                return view($vak.'.'.$opdracht.'.overview');
+//            }
+//        }
+//    }
 }
